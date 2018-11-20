@@ -4,8 +4,6 @@ var posY = parseInt(window.prompt("Insert job y-pos"), 0);
 var duration = parseInt(window.prompt("Insert job duration", 0));
 var intervalBetweenJobs =  parseInt(window.prompt("Insert interval between jobs", 0));
 
-var 
-
 var jobCounter = 0;
 
 var badInput = false;
