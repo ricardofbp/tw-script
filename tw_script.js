@@ -1,24 +1,37 @@
-var jobId = window.prompt("Insert job ID");
-var posX = window.prompt("Insert job x-pos");
-var posY = window.prompt("Insert job y-pos");
-var duration = window.prompt("Insert job duration");
-var interval =  window.prompt("Insert interval between jobs");
+var jobId = parseInt(window.prompt("Insert job ID", 0));
+var posX = parseInt(window.prompt("Insert job x-pos", 0));
+var posY = parseInt(window.prompt("Insert job y-pos"), 0);
+var duration = parseInt(window.prompt("Insert job duration", 0));
+var intervalBetweenJobs =  parseInt(window.prompt("Insert interval between jobs", 0));
 
-function validateInputs() {
-     
+var 
+
+var jobCounter = 0;
+
+var badInput = false;
+
+function validateInputs() 
+{
+    if (jobId <= 0) badInput = true;
+	else if (posX <= 0) badInput = true;
+	else if (posY <= 0) badInput = true;
+	else if (duration <= 0) badInput = true;
+	else if (interval <= 0 || interval <= duration) badInput = true;
 }
 
-function validateJobId() {}
-function validatePosX() {}
-function validatePosY() {}
-function validateJobId() {}
+var automate = function()
+{
+	if (!badInput) 
+	{
+		automate = function(){}; // kill it as soon as it was called 
+		setInterval(function()
+		{
+			JobWindow.startJob(jobId, posX, posY, duration);
+			console.log("Job done " + jobCounter + " times");
+		}, intervalBetweenJobs);
+    }
 
-var automate = function(){
-     automate = function(){}; // kill it as soon as it was called
-  var i = 0;
-  //setInterval(function(){JobWindow.startJob(jobId, posX, posY, duration)}, interval)
-  setInterval(function(){console.log("debug " + i)}, 2000);
-  alert("aviso só pode aparecer uma vez")
+    else alert("Bad input, restart the script");
 
 }
 
