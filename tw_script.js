@@ -5,7 +5,10 @@ var duration = window.prompt("Insert job duration");
 var interval =  window.prompt("Insert interval between jobs");
 
 function automate() {
-  setInterval(function(){JobWindow.startJob(jobId, posX, posY, duration)}, interval)
+  var i = 0;
+  //setInterval(function(){JobWindow.startJob(jobId, posX, posY, duration)}, interval)
+  setInterval(function(){console.log("debug " + i)}, 2000);
+
 }
 
 automate();
