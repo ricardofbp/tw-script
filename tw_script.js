@@ -11,4 +11,5 @@ function automate() {
 
 }
 
-//automate();
+automate();
+return;
