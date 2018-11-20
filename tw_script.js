@@ -4,6 +4,15 @@ var posY = window.prompt("Insert job y-pos");
 var duration = window.prompt("Insert job duration");
 var interval =  window.prompt("Insert interval between jobs");
 
+function validateInputs() {
+     
+}
+
+function validateJobId() {}
+function validatePosX() {}
+function validatePosY() {}
+function validateJobId() {}
+
 var automate = function(){
      automate = function(){}; // kill it as soon as it was called
   var i = 0;
