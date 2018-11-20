@@ -1,2 +1,1 @@
-# tw-script
-The West Job Automator
+Little script for the browser game The West that automates jobs based on their id, position, and duration.
