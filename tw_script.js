@@ -24,7 +24,7 @@ var automate = function()
 {
 	validateInputs();
 	
-	console.log("Starting job " + jobId + " at pos " + "(" + posX + ", " + posY + "with " + duration + " secs duration with an invertal of " + interval + " secs");
+	console.log("Starting job " + jobId + " at pos " + "(" + posX + ", " + posY + "with " + duration + " secs duration with an invertal of " + intervalBetweenJobs + " secs");
 	if (!badInput)
 	{
 		automate = function(){}; // kill it as soon as it was called 
