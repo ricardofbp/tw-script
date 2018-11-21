@@ -17,6 +17,8 @@ function validateInputs()
 	else if (posY <= 0) badInput = true;
 	else if (duration <= 0) badInput = true;
 	else if (interval <= 0 || interval <= duration) badInput = true;
+
+	console.log("Starting job " + jobId + " at pos " + "(" + posX + ", " + posY + "with " + duration + " secs duration with an invertal of " + interval + " secs");
 }
 
 var automate = function()
