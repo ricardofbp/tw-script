@@ -31,7 +31,7 @@ var automate = function()
 			jobCounter = jobCounter + 1;
 			console.log("Job done " + jobCounter + " times");
 			
-		}, intervalBetweenJobs);
+		}, intervalBetweenJobs*1000);
     	
     	checkEnergy = setInterval(function()
 		{
