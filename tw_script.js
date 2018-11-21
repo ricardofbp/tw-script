@@ -7,6 +7,7 @@ var checkEnergy, doJob;
 var jobCounter = 0;
 
 var badInput = false;
+var minimumEnergy = 10;
 
 recordFp = function(){}; //disables anticheat???
 
@@ -40,7 +41,7 @@ var automate = function()
     	checkEnergy = setInterval(function()
 		{
 			console.log("Checking energy: " + Character.energy);
-			if (Character.energy <= 10) {
+			if (Character.energy <= minimumEnergy) {
 				clearInterval(checkEnergy);
 				clearInterval(doJob);
 
