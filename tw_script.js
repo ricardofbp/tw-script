@@ -2,7 +2,7 @@ var jobId = parseInt(window.prompt("Insert job ID", 0));
 var posX = parseInt(window.prompt("Insert job x-pos", 0));
 var posY = parseInt(window.prompt("Insert job y-pos"), 0);
 var duration = parseInt(window.prompt("Insert job duration", 0));
-var intervalBetweenJobs =  parseInt(window.prompt("Insert interval between jobs", 0));
+var intervalBetweenJobs = parseInt(window.prompt("Insert interval between jobs", 0));
 var checkEnergy, doJob;
 var jobCounter = 0;
 
@@ -12,7 +12,7 @@ recordFp = function(){}; //disables anticheat???
 
 function validateInputs() 
 {
-    if (jobId <= 0) badInput = true;
+    if (jobId <= 0 || (jobId instanceof Integer)) badInput = true;
 	else if (posX <= 0) badInput = true;
 	else if (posY <= 0) badInput = true;
 	else if (duration <= 0) badInput = true;
@@ -42,7 +42,7 @@ var automate = function()
 				//TODO go to town and sleep
 			}
 				
-		}, intervalBetweenJobs * 2);
+		}, intervalBetweenJobs * 2 * 1000);
 	}
 
     else alert("Bad input, restart the script");
