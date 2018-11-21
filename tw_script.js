@@ -33,8 +33,8 @@ var automate = function()
 		doJob = setInterval(function()
 		{
 			JobWindow.startJob(jobId, posX, posY, duration);
+			console.log("Job done " + jobCounter + " times");
 			jobCounter = jobCounter + 1;
-			console.log("Job done " + jobCounter - 1 + " times");
 			
 		}, intervalBetweenJobs*1000);
     	
