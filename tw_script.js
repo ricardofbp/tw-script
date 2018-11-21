@@ -24,7 +24,7 @@ var automate = function()
 {
 	validateInputs();
 	
-	console.log("Starting job " + jobId + " at pos " + "(" + posX + ", " + posY + "with " + duration + " secs duration with an invertal of " + intervalBetweenJobs + " secs");
+	console.log("Starting job " + jobId + " at pos " + "(" + posX + ", " + posY + ") with " + duration + " secs duration with an invertal of " + intervalBetweenJobs + " secs");
 	if (!badInput)
 	{
 		automate = function(){}; // kill it as soon as it was called 
@@ -33,7 +33,7 @@ var automate = function()
 		{
 			JobWindow.startJob(jobId, posX, posY, duration);
 			jobCounter = jobCounter + 1;
-			console.log("Job done " + jobCounter + " times");
+			console.log("Job done " + jobCounter - 1 + " times");
 			
 		}, intervalBetweenJobs*1000);
     	
@@ -43,7 +43,13 @@ var automate = function()
 			if (Character.energy <= 10) {
 				clearInterval(checkEnergy);
 				clearInterval(doJob);
-				//TODO go to town and sleep
+
+				//go to HOME town and sleep
+				//TODO go to any near town, possible?
+				console.log("Low energy: " + Character.energy);
+				console.log("Going to home town id (=" + Character.homeTown.town_id + ") to rest");
+				HotelWindow.open(Character.homeTown.town_id);
+				HotelWindow.start("luxurious_apartment");
 			}
 				
 		}, intervalBetweenJobs * 2 * 1000);
