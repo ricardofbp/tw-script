@@ -16,7 +16,7 @@ function validateInputs()
 	else if (posX <= 0) { badInput = true; }
 	else if (posY <= 0) { badInput = true; }
 	else if (duration <= 0) { badInput = true; }
-	else if (interval <= 0 || interval <= duration) { badInput = true; }
+	else if (intervalBetweenJobs <= 0 || intervalBetweenJobs <= duration) { badInput = true; }
 
 }
 
